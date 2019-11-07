@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../static/style.css" th:href="@{/style.css}"></link>
+</head>
+<body>
+	<h1>Form Input Model Page</h1>
+	<form action="#" th:action="@{/department/inputModel}" th:object="${departmentModel}" method="post">
+	<table>
+		<tr>
+			<td>Department Name</td><td><input type="text" th:field="*{DepartmentName}"></td>
+		</tr>
+		<tr>
+			<td>Manager Id</td><td><input type="text" th:field="*{ManagerId}"></td>
+		</tr>
+		<tr>
+			<td>Location Id</td><td><input type="text" th:field="*{LocationId}"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="kirim"></td>
+		</tr>
+	</table>
+	
+	</form>
+</body>
+</html>

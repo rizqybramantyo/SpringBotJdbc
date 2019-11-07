@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"
+	href="../static/bootstrap.min.css" th:href="@{/bootstrap.min.css}"></link>
+<link rel="stylesheet" type="text/css" href="../static/bootstrap.css"
+	th:href="@{/bootstrap.css}"></link>
+<link rel="stylesheet" type="text/css" href="../static/style.css"
+	th:href="@{/style.css}"></link>
+</head>
+<body>
+	<div class="header">
+	<div class="jarak">
+		<center>
+		<button type="button" class="btn btn-success">
+			<a th:href="@{'/department/inputAdd'}">Add Data</a>
+		</button>
+		</center>
+		<center>
+		<button type="button" class="btn btn-light">
+			<a th:href="@{'/menu/'}">Home</a>
+		</button>
+		</center>
+	</div>
+		<br />
+		<div class="container">
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Department Id</th>
+					<th scope="col">Department Name</th>
+					<th scope="col">Manager Id</th>
+					<th scope="col">Location Id</th>
+					<th scope="col"></th>
+					<th scope="col"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="data:${dpt}">
+					<th th:text="${data.departmentId}"></th>
+					<td th:text="${data.departmentName}"></td>
+					<td th:text="${data.managerId}"></td>
+					<td th:text="${data.locationId}"></td>
+					<td><a th:href="@{'/department/edit/'+${data.departmentId}}">Edit</td>
+					<td><a th:href="@{'/department/delete/'+${data.departmentId}}">Delete</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+	</div>
+</body>
+</html>

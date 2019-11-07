@@ -1,0 +1,24 @@
+@charset "ISO-8859-1";
+
+.header{
+	margin-top: 40px;
+}
+
+h1{
+	text-align: center;
+}
+.jarak {
+	margin-top  : 30px;
+	margin-bottom : 20px;
+}
+
+.buttonAdd{
+	float:right;
+}
+.buttonHome{
+	float:left;
+}
+
+img{
+	width: 100%;
+}

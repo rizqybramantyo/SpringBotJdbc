@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Menu</title>
+<link rel="stylesheet" type="text/css"
+	href="../static/bootstrap.min.css" th:href="@{/bootstrap.min.css}"></link>
+<link rel="stylesheet" type="text/css" href="../static/bootstrap.css"
+	th:href="@{/bootstrap.css}"></link>
+<link rel="stylesheet" type="text/css" href="../static/style.css"
+	th:href="@{/style.css}"></link>
+</head>
+<body>
+	<div class="container">
+	
+		<div class="header">
+		<img src="/image/iklan2header.jpg/" class="img-fluid" alt="Responsive image">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Employees</h5>
+							<p class="card-text">With supporting text below as a natural
+								lead-in to additional content.</p>
+							<a th:href="@{'/employee/'}" class="btn btn-primary">Detail</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Department</h5>
+							<p class="card-text">With supporting text below as a natural
+								lead-in to additional content.</p>
+							<a th:href="@{'/department/'}" class="btn btn-primary">Details</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

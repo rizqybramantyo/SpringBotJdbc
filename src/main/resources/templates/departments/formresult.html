@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+		<td>Department Id</td>
+		<td>Department Name</td>
+		<td>Manager Id</td>
+		<td>Location Id</td>
+		<td>Edit</td>
+		</tr>
+		
+		<tr th:each="data:${departments}">
+		<td th:text="${data.departmentId}"></td>
+		<td th:text="${data.departmentName}">Department Name</td>
+		<td th:text="${data.managerId}">Manager Id</td>
+		<td th:text="${data.locationId}">Location Id</td>
+		<td><a th:href="@{'/department/edit/'+${data.departmentId}}">Edit</td>
+		</tr>
+		
+	</table>
+</body>
+</html>

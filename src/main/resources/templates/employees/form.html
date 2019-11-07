@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../static/style.css" th:href="@{/style.css}"></link>
+</head>
+<body>
+	<h1>Form Input Model Page</h1>
+	<form action="#" th:action="@{/employee/inputModel}" th:object="${employeeModel}" method="post">
+	<table>
+		<tr>
+			<td>First</td><td><input type="text" th:field="*{firstName}"></td>
+		</tr>
+		<tr>
+			<td>Last</td><td><input type="text" th:field="*{lastName}"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="kirim"></td>
+		</tr>
+	</table>
+	
+	</form>
+</body>
+</html>
